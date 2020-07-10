@@ -6,6 +6,8 @@ A series of graph related problems to help those new to the graph data structure
     - Undirected Graph
     - Weighted Graph
     - Unweighted Graph
+    - Cyclic Graph
+    - Acyclic Graph
     - More will be included soon...
 
 ## Algorithm Topics
