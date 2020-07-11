@@ -8,11 +8,11 @@ function Graph() {
 }
 */
 
-const addVertix = (adjacencyList, vertix1, vertix2) => {
+const addEdge = (adjacencyList, vertix1, vertix2) => {
     
 }
 
-module.exports = addVertix;
+module.exports = addEdge;
 
 /*
 ! Test Case:

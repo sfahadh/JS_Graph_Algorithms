@@ -7,8 +7,8 @@ Graph.prototype.addVertix = function(vertix) {
 }
 
 Graph.prototype.addEdge = function(vertix1, vertix2) {
-    this.adjacencyList[vertix1] = vertix2;
-    this.adjacencyList[vertix2] = vertix1;
+    this.adjacencyList[vertix1].push(vertix2);
+    this.adjacencyList[vertix2].push(vertix1);
 }
 
 module.exports = Graph;
