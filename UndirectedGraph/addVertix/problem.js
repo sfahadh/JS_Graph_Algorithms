@@ -9,14 +9,13 @@ function Graph() {
 */
 
 const addVertix = (adjacencyList, vertix) => {
-    adjacencyList[vertix] = [];
-    return adjacencyList;
+
 }
 
 module.exports = addVertix;
 
 /*
 ! Test Case:
-* Sample Input: { "A": ["B", "C"], "B": ["A"], "C": ["A"] }, "D"
-* Sample Output: { "A": ["B", "C"], "B": ["A"], "C": ["A"], "D": [] }
+* Sample Input: { "A": [], "B": [], "C": [] }, "D"
+* Sample Output: { "A": [], "B": [], "C": [], "D": [] }
 */
