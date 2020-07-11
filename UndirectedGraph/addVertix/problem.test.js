@@ -1,17 +1,15 @@
 const Graph = require("../../Starter/Undirected/Graph");
+const generateVertices = require("../../Starter/Undirected/generateVertices");
 const addVertix = require("./problem");
 
 // Test Case 1:
 test("add the vertex 'D' to the adjacency list", () => {
-    const graph = new Graph();
-    graph.addVertix("A");
-    graph.addVertix("B");
-    graph.addVertix("C");
+    const inputGraph = new Graph();
+    const outputGraph = new Graph();
+    const arr = ["A", "B", "C", "D"];
 
-    const result = new Graph();
-    result.addVertix("A");
-    result.addVertix("B");
-    result.addVertix("C");
-    result.addVertix("D");
-    expect(addVertix(graph.adjacencyList, "D")).toEqual(result.adjacencyList);
+    generateVertices(inputGraph, arr.slice(0, arr.length - 1));
+    generateVertices(outputGraph, arr);
+
+    expect(addVertix(inputGraph.adjacencyList, "D")).toEqual(outputGraph.adjacencyList);
 })

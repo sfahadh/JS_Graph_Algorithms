@@ -9,7 +9,8 @@ function Graph() {
 */
 
 const addVertix = (adjacencyList, vertix) => {
-
+    adjacencyList[vertix] = [];
+    return adjacencyList;
 }
 
 module.exports = addVertix;
