@@ -41,12 +41,13 @@ test("remove the edge between vertices 'loki' and 'yang'", () => {
 
     inputGraph.addEdge("loki", "thor");
     inputGraph.addEdge("hulk", "thor");
+    outputGraph.addEdge("hulk", "thor");
 
     expect(removeEdge(inputGraph.adjacencyList, "loki", "thor")).toEqual(outputGraph.adjacencyList);
 })
 
 // Test Case 4:
-test("remove the edge between vertices 'left' and 'right'", () => {
+test("remove the edge between vertices 'left' and 'up'", () => {
     const inputGraph = new Graph();
     const outputGraph = new Graph();
     const arr = ["left", "right", "up", "down"];
@@ -56,8 +57,11 @@ test("remove the edge between vertices 'left' and 'right'", () => {
 
     inputGraph.addEdge("left", "right");
     inputGraph.addEdge("up", "down");
+    outputGraph.addEdge("left", "right");
+    outputGraph.addEdge("up", "down");
+    inputGraph.addEdge("left", "up");
 
-    expect(removeEdge(inputGraph.adjacencyList, "left", "right")).toEqual(outputGraph.adjacencyList);
+    expect(removeEdge(inputGraph.adjacencyList, "left", "up")).toEqual(outputGraph.adjacencyList);
 })
 
 // Test Case 5:
