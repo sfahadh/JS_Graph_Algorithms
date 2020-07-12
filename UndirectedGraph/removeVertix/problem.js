@@ -16,6 +16,6 @@ module.exports = removeVertix;
 
 /*
 ! Test Case:
-* Sample Input: { "A": [], "B": ["C"], "C": ["B", "A"] }, "B"
-* Sample Output: { "A": [], "C": ["A"] }
+* Sample Input: { "A": ["C"], "B": ["C"], "C": ["B", "A"] }, "B"
+* Sample Output: { "A": ["C"], "C": ["A"] }
 */
