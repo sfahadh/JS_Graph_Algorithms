@@ -16,8 +16,5 @@ test("remove the vetix 'B' and all its relationships", () => {
     inputGraph.addEdge("A", "C");
     outputGraph.addEdge("A", "C");
 
-    console.log(inputGraph.adjacencyList)
-    console.log(outputGraph.adjacencyList)
-
     expect(removeVertix(inputGraph.adjacencyList, "B")).toEqual(outputGraph.adjacencyList);
 })
