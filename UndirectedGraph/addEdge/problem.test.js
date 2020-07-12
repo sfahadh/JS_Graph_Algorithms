@@ -12,7 +12,5 @@ test("established an edge between vertices 'B' and 'C'", () => {
     generateVertices(outputGraph, arr);
     outputGraph.addEdge("B", "C");
 
-    console.log(outputGraph);
-
     expect(addEdge(inputGraph.adjacencyList, "B", "C")).toEqual(outputGraph.adjacencyList);
 })
