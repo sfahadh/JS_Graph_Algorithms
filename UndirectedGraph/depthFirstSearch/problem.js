@@ -1,15 +1,30 @@
 // ? In Visual Studo Code, install "Better Comments" to see colorful effects of comments
 
 /*
-TODO: Complete the following depth first search problem below. There is only 1 input, which is the adjacency list. The goal of this problem is to traverse the graph and record every vertix found and push it into an array. Then return the array.
+TODO: Complete the following depth first search problem below. There are 2 inputs, which are the adjacency list and the vertix in which to start the traversal. The goal of this problem is to traverse the graph from the start vertix and record every vertix found and push it into an array. Then return the array.
 
 function Graph() {
     this.adjacencyList = {};
 }
 */
 
-const depthFirstSearch = adjacencyList => {
+const depthFirstSearch = (adjacencyList, start) => {
+    const result = [];
+    const visited = {};
 
+    (function recurse(vertix){
+        if (!vertix) return null;
+        result.push(vertix);
+        visited[vertix] = true;
+        for (let item of adjacencyList[vertix]) {
+            if (!visited[item]) {
+                return recurse(item);
+            }
+        }
+    })(start)
+
+    console.log(result);
+    return result;
 }
 
 module.exports = depthFirstSearch;
