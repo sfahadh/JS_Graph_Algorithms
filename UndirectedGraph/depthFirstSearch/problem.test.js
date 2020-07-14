@@ -50,3 +50,23 @@ test("starting with vertix 'myself', return ['myself']", () => {
 test("empty graph, return []", () => {
     expect(depthFirstSearch(new Graph().adjacencyList)).toEqual([]);
 })
+
+// Test Case 5:
+test("starting with vertix 'A', return ['Middle', 'Up', 'Left', 'Down', 'Right']", () => {
+    const inputGraph = new Graph();
+    const arr = ["Up", "Down", "Left", "Right", "Middle"];
+    generateVertices(inputGraph, arr);
+
+    inputGraph.addEdge("Middle", "Up");
+    inputGraph.addEdge("Middle", "Down");
+    inputGraph.addEdge("Middle", "Left");
+    inputGraph.addEdge("Middle", "Right");
+    inputGraph.addEdge("Up", "Left");
+    inputGraph.addEdge("Up", "Right");
+    inputGraph.addEdge("Down", "Left");
+    inputGraph.addEdge("Down", "Right");
+
+    const result = ["Middle", "Up", "Left", "Down", "Right"]
+
+    expect(depthFirstSearch(inputGraph.adjacencyList, "Middle")).toEqual(result);
+})

@@ -22,8 +22,7 @@ const depthFirstSearch = (adjacencyList, start) => {
             }
         }
     })(start)
-
-    console.log(result);
+    
     return result;
 }
 
