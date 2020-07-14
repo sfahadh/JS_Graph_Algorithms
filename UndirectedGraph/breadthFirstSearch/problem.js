@@ -9,26 +9,7 @@ function Graph() {
 */
 
 const breadthFirstSearch = (adjacencyList, start) => {
-    const queue = [start];
-    const result = [];
-    const visited = {};
-    visited[start] = true;
-    let currVertix;
-
-    while (queue.length) {
-        currVertix = queue.shift();
-        result.push(currVertix);
-
-        adjacencyList[currVertix].forEach(neighbor => {
-            if (!visited[neighbor]) {
-                visited[neighbor] = true;
-                queue.push(neighbor);
-            }
-        })
-    }
-
-    console.log(result)
-    return result;
+    
 }
 
 module.exports = breadthFirstSearch;
