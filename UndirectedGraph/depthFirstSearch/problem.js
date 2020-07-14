@@ -9,7 +9,22 @@ function Graph() {
 */
 
 const depthFirstSearch = (adjacencyList, start) => {
+    const result = [];
+    const visited = {};
 
+    (function recurse(vertix){
+        if (!vertix) return null;
+        visited[vertix] = true;
+        result.push(vertix);
+        for (let item of adjacencyList[vertix]) {
+            if (!visited[item]) {
+                return recurse(item);
+            }
+        }
+    })(start)
+    
+    console.log(result)
+    return result;
 }
 
 module.exports = depthFirstSearch;
