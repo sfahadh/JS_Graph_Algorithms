@@ -27,4 +27,4 @@ module.exports = depthFirstSearch;
 * Sample Output: ["A", "B", "C", "D", "E", "F"]
 */
 
-// ? Look under images -> testcase1.png to view diagram of graph
+// ? Look under images -> graph1.png to view diagram of graph
