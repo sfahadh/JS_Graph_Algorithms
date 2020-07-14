@@ -38,3 +38,15 @@ test("starting with vertix 'Apple', return ['Apple', 'Netflix', 'Amazon', 'Faceb
 
     expect(depthFirstSearch(inputGraph.adjacencyList, "Apple")).toEqual(result);
 })
+
+// Test Case 3:
+test("starting with vertix 'myself', return ['myself']", () => {
+    const inputGraph = new Graph();
+    inputGraph.addVertix("myself")
+    expect(depthFirstSearch(inputGraph.adjacencyList, "myself")).toEqual(["myself"]);
+})
+
+// Test Case 4:
+test("empty graph, return []", () => {
+    expect(depthFirstSearch(new Graph().adjacencyList)).toEqual([]);
+})
