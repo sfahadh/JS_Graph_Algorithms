@@ -27,4 +27,4 @@ module.exports = breadthFirstSearch;
 * Sample Output: ["A", "B", "C", "D", "E", "F"]
 */
 
-// ? Look under images -> graph1.png to view diagram of graph
+// ? Look under Undirected -> Images -> Unweighted -> graph1.png to view diagram of graph

@@ -2,7 +2,7 @@ const Graph = require("../../Starter/Undirected/Graph");
 const generateVertices = require("../../Starter/Undirected/generateVertices");
 const depthFirstSearch = require("./problem");
 
-// Test Case 1: // ? Look under images -> graph1.png for diagram
+// Test Case 1: // ? Look under Undirected -> Images -> Unweighted -> graph1.png to view diagram of graph
 test("starting with vertix 'A', return ['A', 'B', 'D', 'E', 'C']", () => {
     const inputGraph = new Graph();
     const arr = ["A", "B", "C", "D", "E", "F"];
@@ -19,7 +19,7 @@ test("starting with vertix 'A', return ['A', 'B', 'D', 'E', 'C']", () => {
     expect(depthFirstSearch(inputGraph.adjacencyList, "A")).toEqual(["A", "B", "D", "E", "C"]);
 })
 
-// Test Case 2: // ? Look under images -> graph2.png for diagram
+// Test Case 2: // ? Look under Undirected -> Images -> Unweighted -> graph2.png to view diagram of graph
 test("starting with vertix 'Apple', return ['Apple', 'Netflix', 'Amazon', 'Facebook', 'Google', 'Microsoft']", () => {
     const inputGraph = new Graph();
     const arr = ["Facebook", "Apple", "Microsoft", "Amazon", "Google", "Netflix"];
@@ -51,7 +51,7 @@ test("empty graph, return []", () => {
     expect(depthFirstSearch(new Graph().adjacencyList)).toEqual([]);
 })
 
-// Test Case 5: // ? Look under images -> graph3.png for diagram
+// Test Case 5: // ? Look under Undirected -> Images -> Unweighted -> graph3.png to view diagram of graph
 test("starting with vertix 'A', return ['Middle', 'Up', 'Left', 'Down', 'Right']", () => {
     const inputGraph = new Graph();
     const arr = ["Up", "Down", "Left", "Right", "Middle"];
