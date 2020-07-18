@@ -1,5 +1,5 @@
-const Graph = require("../../Starter/Undirected/UnweightedGraph");
-const generateVertices = require("../../Starter/Undirected/generateVertices");
+const Graph = require("../../../Starter/Undirected/UnweightedGraph");
+const generateVertices = require("../../../Starter/Undirected/generateVertices");
 const removeEdge = require("./problem");
 
 // Test Case 1:

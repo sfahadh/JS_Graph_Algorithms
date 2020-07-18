@@ -1,5 +1,5 @@
-const Graph = require("../../Starter/Undirected/UnweightedGraph");
-const generateVertices = require("../../Starter/Undirected/generateVertices");
+const Graph = require("../../../Starter/Undirected/UnweightedGraph");
+const generateVertices = require("../../../Starter/Undirected/generateVertices");
 const breadthFirstSearch = require("./problem");
 
 // Test Case 1: // ? Look under Undirected -> Images -> Unweighted -> graph1.png to view diagram of graph
