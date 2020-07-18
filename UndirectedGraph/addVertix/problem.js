@@ -3,7 +3,7 @@
 /*
 TODO: Complete the following add vertix problem below. There are two inputs, the adjacency list of the graph and the vertix. The goal of this problem is to add the vertix to the adjacency list and then return that list.
 
-function Graph() {
+function UnweightedGraph() {
     this.adjacencyList = {};
 }
 */

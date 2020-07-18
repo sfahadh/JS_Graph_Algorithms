@@ -3,7 +3,7 @@
 /*
 TODO: Complete the following depth first search problem below. There are 2 inputs, which are the adjacency list and the vertix in which to start the traversal. The goal of this problem is to traverse the graph from the start vertix and record every vertix found and push it into an array. Then return the array.
 
-function Graph() {
+function UnweightedGraph() {
     this.adjacencyList = {};
 }
 */
