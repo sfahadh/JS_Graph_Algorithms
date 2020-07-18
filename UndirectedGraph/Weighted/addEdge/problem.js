@@ -8,7 +8,7 @@ function UnweightedGraph() {
 }
 */
 
-const addEdge = (adjacencyList, vertix1, vertix2) => {
+const addEdge = (adjacencyList, vertix1, vertix2, weight) => {
 
 }
 
