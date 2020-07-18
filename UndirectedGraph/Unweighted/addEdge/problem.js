@@ -17,5 +17,5 @@ module.exports = addEdge;
 /*
 ! Test Case:
 * Sample Input: { "A": [], "B": [], "C": [] }, "B", "C"
-* Sample Output: { "A": [], "B": [C"], "C": ["B"] }
+* Sample Output: { "A": [], "B": ["C"], "C": ["B"] }
 */
