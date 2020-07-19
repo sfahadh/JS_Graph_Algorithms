@@ -26,5 +26,4 @@ PriorityQueue.prototype.bubbleUp = function () {
     }
 }
 
-
 module.exports = PriorityQueue;
