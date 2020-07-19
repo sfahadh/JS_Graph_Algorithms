@@ -1,7 +1,7 @@
 // ? In Visual Studo Code, install "Better Comments" to see colorful effects of comments
 const PriorityQueue = require("../../../PriorityQueue/PriorityQueue");
 /*
-TODO: Complete the following dijkstra's algorithm problem below. There are 3 inputs, which are the adjacency list, the vertix in which to start the traversal, and the vertix in which to end the traversal. The goal of this problem is to find the shortest path between the 2 vertices. 
+TODO: Complete the following dijkstra's algorithm problem below. There are 3 inputs, which are the adjacency list, the vertix in which to start the traversal, and the vertix in which to end the traversal. The goal of this problem is to find the shortest path between the 2 vertices. The return result should be an array that depicts the order of nodes that were visited from start to end.
 
 function WeightedGraph() {
     this.adjacencyList = {};
