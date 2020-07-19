@@ -13,20 +13,7 @@ function PriorityQueue() {
 */
 
 const dijkstras = (adjacencyList, start, end) => {
-    const priorityQueue = new PriorityQueue();
-    const distance = {};
-    const previous = {};
 
-    for (let vertix in adjacencyList) {
-        if (vertix === start) {
-            distance[vertix] = 0;
-            priorityQueue.enqueue(vertix, 0);
-        } else {
-            distance[vertix] = Infinity;
-            priorityQueue.enqueue(vertix, Infinity);
-        }
-        previous[vertix] = null;
-    }
 }
 
 module.exports = dijkstras;
