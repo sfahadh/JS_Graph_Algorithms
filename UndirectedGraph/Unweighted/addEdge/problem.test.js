@@ -1,7 +1,8 @@
 const Graph = require("../../../Starter/Undirected/UnweightedGraph");
 const generateVertices = require("../../../Starter/generateVertices");
 const addEdge = require("./problem");
-const graph1 = require("../../../Starter/Structure/Unweighted-Undirected/graph-1");
+const graph2 = require("../../../Starter/Structure/Unweighted-Undirected/graph-2");
+
 
 // Test Case 1:
 test("established an edge between vertices 'B' and 'C'", () => {
