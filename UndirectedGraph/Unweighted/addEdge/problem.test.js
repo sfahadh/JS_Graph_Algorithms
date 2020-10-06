@@ -3,6 +3,12 @@ const generateVertices = require("../../../Starter/generateVertices");
 const addEdge = require("./problem");
 const graph2 = require("../../../Starter/Structure/Unweighted-Undirected/graph-2");
 
+// Test Case 0:
+test("testing graph", () => {
+    const result = graph2();
+    result.addEdge("Netflix", "Google");
+    expect(addEdge(graph2().adjacencyList, "Netflix", "Google")).toEqual(result.adjacencyList);
+})
 
 // Test Case 1:
 test("established an edge between vertices 'B' and 'C'", () => {
