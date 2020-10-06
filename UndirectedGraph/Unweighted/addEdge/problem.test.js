@@ -1,13 +1,13 @@
 const Graph = require("../../../Starter/Undirected/UnweightedGraph");
 const generateVertices = require("../../../Starter/generateVertices");
 const addEdge = require("./problem");
-const graph2 = require("../../../Starter/Structure/Unweighted-Undirected/graph-2");
+const graph3 = require("../../../Starter/Structure/Unweighted-Undirected/graph-3");
 
 // Test Case 0:
 test("testing graph", () => {
-    const result = graph2();
-    result.addEdge("Netflix", "Google");
-    expect(addEdge(graph2().adjacencyList, "Netflix", "Google")).toEqual(result.adjacencyList);
+    const result = graph3();
+    result.addEdge("Up", "Down");
+    expect(addEdge(graph3().adjacencyList, "Up", "Down")).toEqual(result.adjacencyList);
 })
 
 // Test Case 1:
