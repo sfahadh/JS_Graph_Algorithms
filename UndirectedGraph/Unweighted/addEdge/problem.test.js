@@ -1,14 +1,6 @@
 const Graph = require("../../../Starter/Undirected/UnweightedGraph");
 const generateVertices = require("../../../Starter/generateVertices");
 const addEdge = require("./problem");
-const graph6 = require("../../../Starter/Structure/Unweighted-Undirected/graph-6");
-
-// Test Case 0:
-test("testing graph", () => {
-    const result = graph6();
-    result.addEdge("I", "X");
-    expect(addEdge(graph6().adjacencyList, "I", "X")).toEqual(result.adjacencyList);
-})
 
 // Test Case 1:
 test("established an edge between vertices 'B' and 'C'", () => {
