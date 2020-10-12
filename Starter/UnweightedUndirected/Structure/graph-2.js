@@ -1,4 +1,4 @@
-const Graph = require("../../Undirected/UnweightedGraph");
+const Graph = require("../UnweightedUndirectedGraph");
 const generateVertices = require("../../generateVertices");
 
 const vertices = ["Apple", "Netflix", "Google", "Amazon", "MS", "FB"];
