@@ -1,13 +1,13 @@
-function UnweightedGraph() {
+function UnweightedDirectedGraph() {
     this.adjacencyList = {};
 }
 
-UnweightedGraph.prototype.addVertix = function (vertix) {
+UnweightedDirectedGraph.prototype.addVertix = function (vertix) {
     this.adjacencyList[vertix] = [];
 }
 
-UnweightedGraph.prototype.addEdge = function (vertix1, vertix2) {
+UnweightedDirectedGraph.prototype.addEdge = function (vertix1, vertix2) {
     this.adjacencyList[vertix1].push(vertix2);
 }
 
-module.exports = UnweightedGraph;
+module.exports = UnweightedDirectedGraph;
