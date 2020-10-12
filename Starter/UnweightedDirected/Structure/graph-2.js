@@ -1,4 +1,4 @@
-const Graph = require("../../Graphs/UnweightedDirectedGraph");
+const Graph = require("../UnweightedDirectedGraph");
 const generateVertices = require("../../generateVertices");
 
 const vertices = [1, 2, 3];
