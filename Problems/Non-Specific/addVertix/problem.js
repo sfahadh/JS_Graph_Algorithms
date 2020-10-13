@@ -7,8 +7,7 @@ TODO: list and then return that list.
 */
 
 const addVertix = (adjacencyList, vertix) => {
-    adjacencyList[vertix] = [];
-    return adjacencyList;
+
 }
 
 module.exports = addVertix;
