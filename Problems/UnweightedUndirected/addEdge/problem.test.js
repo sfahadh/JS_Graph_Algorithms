@@ -7,6 +7,10 @@ const Graph5 = require("../../../Starter/UnweightedUndirected/Structure/graph-5"
 const Graph6 = require("../../../Starter/UnweightedUndirected/Structure/graph-6");
 const Graph7 = require("../../../Starter/UnweightedUndirected/Structure/graph-7");
 const Graph8 = require("../../../Starter/UnweightedUndirected/Structure/graph-8");
+const Graph9 = require("../../../Starter/UnweightedUndirected/Structure/graph-9");
+const Graph10 = require("../../../Starter/UnweightedUndirected/Structure/graph-10");
+const Graph11 = require("../../../Starter/UnweightedUndirected/Structure/graph-11");
+const Graph12 = require("../../../Starter/UnweightedUndirected/Structure/graph-12");
 
 // Test Case 1: //? refer to Starter -> UnweightedUndirected -> Images -> graph-1.png
 test("established an edge between vertices 'B' and 'C'", () => {
@@ -62,4 +66,32 @@ test("established an edge between vertices 'Yin' and 'Yang'", () => {
     const result = Graph8();
     result.addEdge("Yin", "Yang");
     expect(addEdge(Graph8().adjacencyList, "Yin", "Yang")).toEqual(result.adjacencyList);
+})
+
+// Test Case 9: //? refer to Starter -> UnweightedUndirected -> Images -> graph-9.png
+test("established an edge between vertices 'TX' and 'NY'", () => {
+    const result = Graph9();
+    result.addEdge("TX", "NY");
+    expect(addEdge(Graph9().adjacencyList, "TX", "NY")).toEqual(result.adjacencyList);
+})
+
+// Test Case 10: //? refer to Starter -> UnweightedUndirected -> Images -> graph-10.png
+test("established an edge between vertices 'Drax' and 'Thanos'", () => {
+    const result = Graph10();
+    result.addEdge("Drax", "Thanos");
+    expect(addEdge(Graph10().adjacencyList, "Drax", "Thanos")).toEqual(result.adjacencyList);
+})
+
+// Test Case 11: //? refer to Starter -> UnweightedUndirected -> Images -> graph-11.png
+test("established an edge between vertices 3 and 10", () => {
+    const result = Graph11();
+    result.addEdge(3, 10);
+    expect(addEdge(Graph11().adjacencyList, 3, 10)).toEqual(result.adjacencyList);
+})
+
+// Test Case 12: //? refer to Starter -> UnweightedUndirected -> Images -> graph-12.png
+test("established an edge between vertices -1 and -2", () => {
+    const result = Graph12();
+    result.addEdge(-1, -2);
+    expect(addEdge(Graph12().adjacencyList, -1, -2)).toEqual(result.adjacencyList);
 })
