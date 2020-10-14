@@ -1,5 +1,5 @@
 const Graph = require("../WeightedUndirectedGraph");
-const generateVertices = require("../../generateVertices");
+const generateVertices = require("../../../Starter/generateVertices");
 
 const vertices = ["Hades", "Zeus", "Ares"];
 
@@ -8,8 +8,8 @@ const constructGraph = () => {
     generateVertices(graph, vertices);
 
     graph.addEdge("Hades", "Zeus", 99);
-    graph.addEdge("Hades", "Aries", 91);
-    graph.addEdge("Zeus", "Aries", 96);
+    graph.addEdge("Hades", "Ares", 91);
+    graph.addEdge("Zeus", "Ares", 96);
 
     return graph;
 }

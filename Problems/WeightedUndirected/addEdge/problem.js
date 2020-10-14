@@ -6,7 +6,7 @@ TODO: of the graph, the 2 vertices to establish the relationship, and the weight
 TODO: relationship between the 2 vertices. The goal of this problem is to add an edge with weight 
 TODO: between the two vertices then return the adjacency list.
 
-function UnweightedGraph() {
+function WeightedUndirectedGraph() {
     this.adjacencyList = {};
 }
 */
