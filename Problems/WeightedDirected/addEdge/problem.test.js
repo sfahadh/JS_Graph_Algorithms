@@ -15,8 +15,8 @@ const Graph12 = require("../../../Starter/WeightedDirected/Structure/graph-12");
 // Test Case 1: //? refer to Starter -> WeightedDirected -> Images -> graph-1.png
 test("established an edge between vertices 'Yang' and 'Yin' with weight of 96", () => {
     const result = Graph1();
-    result.addEdge("Yang", "Yin", 96);
-    expect(addEdge(Graph1().adjacencyList, "Yang", "Yin", 96)).toEqual(result.adjacencyList);
+    result.addEdge("Yin", "Yang", 96);
+    expect(addEdge(Graph1().adjacencyList, "Yin", "Yang", 96)).toEqual(result.adjacencyList);
 })
 
 // Test Case 2: //? refer to Starter -> WeightedDirected -> Images -> graph-2.png
