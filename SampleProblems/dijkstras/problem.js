@@ -1,5 +1,5 @@
 // ? In Visual Studo Code, install "Better Comments" to see colorful effects of comments
-const PriorityQueue = require("../../../PriorityQueue/PriorityQueue");
+const PriorityQueue = require("../../PriorityQueue/PriorityQueue");
 /*
 TODO: Complete the following dijkstra's algorithm problem below. There are 3 inputs, which are 
 TODO: the adjacency list, the vertix in which to start the traversal, and the vertix in which to 

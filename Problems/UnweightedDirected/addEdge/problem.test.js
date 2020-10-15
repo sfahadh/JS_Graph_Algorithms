@@ -16,6 +16,7 @@ const Graph12 = require("../../../Starter/UnweightedDirected/Structure/graph-12"
 test("established an edge between vertices 'Yin' and 'Yang'", () => {
     const result = Graph1();
     result.addEdge("Yin", "Yang");
+    console.log(Graph1().adjacencyList["Yang"], result.adjacencyList);
     expect(addEdge(Graph1().adjacencyList, "Yin", "Yang")).toEqual(result.adjacencyList);
 })
 
