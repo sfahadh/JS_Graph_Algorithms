@@ -39,3 +39,31 @@ test("established an edge between vertices 'S' and 'T'", () => {
     result.addEdge("S", "T");
     expect(addEdge(Graph4().adjacencyList, "S", "T")).toEqual(result.adjacencyList);
 })
+
+// Test Case 5: //? refer to Starter -> UnweightedDirected -> Images -> graph-5.png
+test("established an edge between vertices 6 and 8", () => {
+    const result = Graph5();
+    result.addEdge(6, 8);
+    expect(addEdge(Graph5().adjacencyList, 6, 8)).toEqual(result.adjacencyList);
+})
+
+// Test Case 6: //? refer to Starter -> UnweightedDirected -> Images -> graph-6.png
+test("established an edge between vertices 'M' and 'R'", () => {
+    const result = Graph6();
+    result.addEdge("M", "R");
+    expect(addEdge(Graph6().adjacencyList, "M", "R")).toEqual(result.adjacencyList);
+})
+
+// Test Case 7: //? refer to Starter -> UnweightedDirected -> Images -> graph-7.png
+test("established an edge between vertices 3 and 4", () => {
+    const result = Graph7();
+    result.addEdge(3, 4);
+    expect(addEdge(Graph7().adjacencyList, 3, 4)).toEqual(result.adjacencyList);
+})
+
+// Test Case 8: //? refer to Starter -> UnweightedDirected -> Images -> graph-8.png
+test("established an edge between vertices 21 and 33", () => {
+    const result = Graph8();
+    result.addEdge(21, 33);
+    expect(addEdge(Graph8().adjacencyList, 21, 33)).toEqual(result.adjacencyList);
+})
