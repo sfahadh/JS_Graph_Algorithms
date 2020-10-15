@@ -15,8 +15,8 @@ const Graph12 = require("../../../Starter/WeightedUndirected/Structure/graph-12"
 // Test Case 1: //? refer to Starter -> WeightedUndirected -> Images -> graph-1.png
 test("established an edge between vertices 'Hades' and 'Zeus' with weight of 91", () => {
     const result = Graph1();
-    result.addEdge("Hades", "Zeus", 91);
-    expect(addEdge(Graph1().adjacencyList, "Hades", "Zeus", 91)).toEqual(result.adjacencyList);
+    result.addEdge("Hades", "Zeus", 5);
+    expect(addEdge(Graph1().adjacencyList, "Hades", "Zeus", 5)).toEqual(result.adjacencyList);
 })
 
 // Test Case 2: //? refer to Starter -> WeightedUndirected -> Images -> graph-2.png
