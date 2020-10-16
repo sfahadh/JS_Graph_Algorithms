@@ -5,7 +5,7 @@ TODO: Complete the following remove edge problem below. There are three inputs, 
 TODO: of the graph and the 2 vertices to remove the relationship. The goal of this problem is to 
 TODO: remove an edge between the two vertices then return the adjacency list.
 
-function UnweightedUndirectedGraph() {
+function UnweightedDirectedGraph() {
     this.adjacencyList = {};
 }
 */
@@ -19,5 +19,5 @@ module.exports = removeEdge;
 /*
 ! Test Case:
 * Sample Input: { "A": [], "B": ["C"], "C": ["B"] }, "B", "C"
-* Sample Output: { "A": [], "B": [], "C": [] }
+* Sample Output: { "A": [], "B": [], "C": ["B"] }
 */
