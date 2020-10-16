@@ -15,11 +15,37 @@ const Graph11 = require("../../../Starter/UnweightedDirected/Structure/graph-11"
 const Graph12 = require("../../../Starter/UnweightedDirected/Structure/graph-12");
 
 // Test Case 1: //? refer to Starter -> UnweightedDirected -> Images -> graph-1.png
-test("remove the edge between vertices '' and ''", () => {
-    const vertices;
+test("remove the edge between vertices 'Yang' and 'Yin'", () => {
+    const vertices = ["Yin", "Yang"];
+    const graph = new Graph();
+    generateVertices(graph, vertices);
+    expect(removeEdge(Graph1().adjacencyList, "Yang", "Yin")).toEqual(graph.adjacencyList);
+})
+
+// Test Case 2: //? refer to Starter -> UnweightedDirected -> Images -> graph-2.png
+test("remove the edge between vertices 1 and 2", () => {
+    const vertices = [1, 2, 3];
     const graph = new Graph();
 
     generateVertices(graph, vertices);
+    graph.addEdge(2, 3);
 
-    expect(removeEdge(Graph1().adjacencyList)).toEqual(graph.adjacencyList);
+    expect(removeEdge(Graph2().adjacencyList, 1, 2)).toEqual(graph.adjacencyList);
+})
+
+// Test Case 3: //? refer to Starter -> UnweightedDirected -> Images -> graph-3.png
+test("remove the edge between vertices -1 and -2", () => {
+    expect(removeEdge(Graph3().adjacencyList, -1, -2)).toEqual(Graph3().adjacencyList);
+})
+
+// Test Case 4: //? refer to Starter -> UnweightedDirected -> Images -> graph-4.png
+test("remove the edge between vertices 'D' and 'T'", () => {
+    const vertices = ["S", "T", "D", "K"];
+    const graph = new Graph();
+
+    generateVertices(graph, vertices);
+    graph.addEdge("D", "S");
+    graph.addEdge("D", "K");
+
+    expect(removeEdge(Graph4().adjacencyList, 'D', 'T')).toEqual(graph.adjacencyList);
 })
