@@ -1,78 +1,18 @@
-const Graph = require("../../../Starter/Undirected/UnweightedGraph");
-const generateVertices = require("../../../Starter/Undirected/generateVertices");
 const removeEdge = require("./problem");
+const Graph1 = require("../../../Starter/UnweightedUndirected/Structure/graph-1");
+const Graph2 = require("../../../Starter/UnweightedUndirected/Structure/graph-2");
+const Graph3 = require("../../../Starter/UnweightedUndirected/Structure/graph-3");
+const Graph4 = require("../../../Starter/UnweightedUndirected/Structure/graph-4");
+const Graph5 = require("../../../Starter/UnweightedUndirected/Structure/graph-5");
+const Graph6 = require("../../../Starter/UnweightedUndirected/Structure/graph-6");
+const Graph7 = require("../../../Starter/UnweightedUndirected/Structure/graph-7");
+const Graph8 = require("../../../Starter/UnweightedUndirected/Structure/graph-8");
+const Graph9 = require("../../../Starter/UnweightedUndirected/Structure/graph-9");
+const Graph10 = require("../../../Starter/UnweightedUndirected/Structure/graph-10");
+const Graph11 = require("../../../Starter/UnweightedUndirected/Structure/graph-11");
+const Graph12 = require("../../../Starter/UnweightedUndirected/Structure/graph-12");
 
 // Test Case 1:
 test("remove the edge between vertices 'B' and 'C'", () => {
-    const inputGraph = new Graph();
-    const outputGraph = new Graph();
-    const arr = ["A", "B", "C", "D"];
-
-    generateVertices(inputGraph, arr);
-    generateVertices(outputGraph, arr);
-
-    inputGraph.addEdge("B", "C")
-
-    expect(removeEdge(inputGraph.adjacencyList, "B", "C")).toEqual(outputGraph.adjacencyList);
-})
-
-// Test Case 2:
-test("remove the edge between vertices 'ying' and 'yang'", () => {
-    const inputGraph = new Graph();
-    const outputGraph = new Graph();
-    const arr = ["ying", "yang"];
-
-    generateVertices(inputGraph, arr);
-    generateVertices(outputGraph, arr);
-
-    inputGraph.addEdge("ying", "yang");
-
-    expect(removeEdge(inputGraph.adjacencyList, "ying", "yang")).toEqual(outputGraph.adjacencyList);
-})
-
-// Test Case 3:
-test("remove the edge between vertices 'loki' and 'yang'", () => {
-    const inputGraph = new Graph();
-    const outputGraph = new Graph();
-    const arr = ["hulk", "loki", "thor", "thanos"];
-
-    generateVertices(inputGraph, arr);
-    generateVertices(outputGraph, arr);
-
-    inputGraph.addEdge("loki", "thor");
-    inputGraph.addEdge("hulk", "thor");
-    outputGraph.addEdge("hulk", "thor");
-
-    expect(removeEdge(inputGraph.adjacencyList, "loki", "thor")).toEqual(outputGraph.adjacencyList);
-})
-
-// Test Case 4:
-test("remove the edge between vertices 'left' and 'up'", () => {
-    const inputGraph = new Graph();
-    const outputGraph = new Graph();
-    const arr = ["left", "right", "up", "down"];
-
-    generateVertices(inputGraph, arr);
-    generateVertices(outputGraph, arr);
-
-    inputGraph.addEdge("left", "right");
-    inputGraph.addEdge("up", "down");
-    outputGraph.addEdge("left", "right");
-    outputGraph.addEdge("up", "down");
-    inputGraph.addEdge("left", "up");
-
-    expect(removeEdge(inputGraph.adjacencyList, "left", "up")).toEqual(outputGraph.adjacencyList);
-})
-
-// Test Case 5:
-test("remove the edge between the vertix 'myself' with itself", () => {
-    const inputGraph = new Graph();
-    const outputGraph = new Graph();
-
-    inputGraph.addVertix("myself");
-    outputGraph.addVertix("myself")
-
-    inputGraph.addEdge("myself", "myself");
-
-    expect(removeEdge(inputGraph.adjacencyList, "myself", "myself")).toEqual(outputGraph.adjacencyList);
+    expect(removeEdge(Graph1().adjacencyList, "B", "C")).toEqual(result.adjacencyList);
 })
