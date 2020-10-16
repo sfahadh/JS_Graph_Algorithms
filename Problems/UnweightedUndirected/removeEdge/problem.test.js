@@ -61,8 +61,6 @@ test("remove the edge between vertices 'Middle' and 'Up'", () => {
     graph.addEdge("Middle", "Left");
     graph.addEdge("Middle", "Right");
 
-    console.log(graph.adjacencyList);
-
     expect(removeEdge(Graph3().adjacencyList, "Up", "Middle")).toEqual(graph.adjacencyList);
 })
 
@@ -82,8 +80,82 @@ test("remove the edge between vertices 2 and 0", () => {
     graph.addEdge(9, 4);
     graph.addEdge(8, 4);
 
-    console.log(graph.adjacencyList);
-
     expect(removeEdge(Graph4().adjacencyList, 2, 0)).toEqual(graph.adjacencyList);
+})
+
+// Test Case 5: //? refer to Starter -> UnweightedUndirected -> Images -> graph-5.png
+test("remove the edge between vertices 4 and 3", () => {
+    const vertices = [5, 3, 0, 9, 1, 7, 4, 2];
+    const graph = new Graph();
+
+    generateVertices(graph, vertices);
+    graph.addEdge(9, 5);
+    graph.addEdge(9, 4);
+    graph.addEdge(4, 5);
+    graph.addEdge(4, 2);
+    graph.addEdge(2, 1);
+    graph.addEdge(3, 0);
+    graph.addEdge(3, 7);
+    graph.addEdge(0, 7);
+
+    expect(removeEdge(Graph5().adjacencyList, 4, 3)).toEqual(graph.adjacencyList);
+})
+
+// Test Case 6: //? refer to Starter -> UnweightedUndirected -> Images -> graph-6.png
+test("remove the edge between vertices 'D' and 'N'", () => {
+    const vertices = ["D", "N", "O", "R", "A", "T", "K", "E", "I", "X"];
+    const graph = new Graph();
+
+    generateVertices(graph, vertices);
+    graph.addEdge("D", "O");
+    graph.addEdge("D", "R");
+    graph.addEdge("R", "E");
+    graph.addEdge("N", "A");
+    graph.addEdge("N", "K");
+    graph.addEdge("N", "T");
+    graph.addEdge("K", "I");
+    graph.addEdge("K", "X");
+
+    expect(removeEdge(Graph6().adjacencyList, "D", "N")).toEqual(graph.adjacencyList);
+})
+
+// Test Case 7: //? refer to Starter -> UnweightedUndirected -> Images -> graph-7.png
+test("remove the edge between vertices 'K' and 'L'", () => {
+    const vertices = ["A", "H", "B", "D", "G", "I", "M", "C", "F", "E", "K", "L"];
+    const graph = new Graph();
+
+    generateVertices(graph, vertices);
+    graph.addEdge("A", "B");
+    graph.addEdge("A", "D");
+    graph.addEdge("A", "G");
+    graph.addEdge("A", "H");
+    graph.addEdge("H", "I");
+    graph.addEdge("B", "D");
+    graph.addEdge("B", "C");
+    graph.addEdge("B", "C");
+    graph.addEdge("D", "C");
+    graph.addEdge("D", "F");
+    graph.addEdge("D", "G");
+    graph.addEdge("G", "F");
+    graph.addEdge("G", "I");
+    graph.addEdge("I", "F");
+    graph.addEdge("I", "K");
+    graph.addEdge("I", "L");
+    graph.addEdge("I", "M");
+    graph.addEdge("M", "L");
+    graph.addEdge("C", "F");
+    graph.addEdge("C", "E");
+    graph.addEdge("F", "K");
+    graph.addEdge("E", "K");
+
+    expect(removeEdge(Graph7().adjacencyList, "K", "L")).toEqual(graph.adjacencyList);
+})
+
+// Test Case 8: //? refer to Starter -> UnweightedUndirected -> Images -> graph-8.png
+test("remove the edge between vertices 'Yin' and 'Yang'", () => {
+    const vertices = ["Yin", "Yang"];
+    const graph = new Graph();
+    generateVertices(graph, vertices);
+    expect(removeEdge(Graph8().adjacencyList, "Yin", "Yang")).toEqual(graph.adjacencyList);
 })
 
