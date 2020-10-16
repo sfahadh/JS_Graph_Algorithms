@@ -4,6 +4,7 @@ const removeVertix = (adjacencyList, vertix) => {
             return v !== vertix;
         })
     }
+
     delete adjacencyList[vertix];
     return adjacencyList;
 }
