@@ -1,4 +1,6 @@
+const generateVertices = require("../../../Starter/generateVertices");
 const removeEdge = require("./problem");
+const Graph = require("../../../Starter/UnweightedUndirected/UnweightedUndirectedGraph");
 const Graph1 = require("../../../Starter/UnweightedUndirected/Structure/graph-1");
 const Graph2 = require("../../../Starter/UnweightedUndirected/Structure/graph-2");
 const Graph3 = require("../../../Starter/UnweightedUndirected/Structure/graph-3");
@@ -12,7 +14,18 @@ const Graph10 = require("../../../Starter/UnweightedUndirected/Structure/graph-1
 const Graph11 = require("../../../Starter/UnweightedUndirected/Structure/graph-11");
 const Graph12 = require("../../../Starter/UnweightedUndirected/Structure/graph-12");
 
-// Test Case 1:
-test("remove the edge between vertices 'B' and 'C'", () => {
-    expect(removeEdge(Graph1().adjacencyList, "B", "C")).toEqual(result.adjacencyList);
+// Test Case 1: //? refer to Starter -> UnweightedUndirected -> Images -> graph-1.png
+test("remove the edge between vertices 'D' and 'E'", () => {
+    const vertices = ["A", "B", "C", "D", "E", "F"];
+    const graph = new Graph();
+
+    generateVertices(graph, vertices);
+    graph.addEdge("A", "B");
+    graph.addEdge("A", "C");
+    graph.addEdge("B", "D");
+    graph.addEdge("C", "E");
+    graph.addEdge("F", "E");
+    graph.addEdge("F", "D");
+
+    expect(removeEdge(Graph1().adjacencyList, "D", "E")).toEqual(graph.adjacencyList);
 })
