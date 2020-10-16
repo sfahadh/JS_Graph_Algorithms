@@ -146,3 +146,80 @@ test("remove the edge between vertices 71 and 57", () => {
 
     expect(removeEdge(Graph8().adjacencyList, 71, 57)).toEqual(graph.adjacencyList);
 })
+
+// Test Case 9: //? refer to Starter -> UnweightedDirected -> Images -> graph-9.png
+test("remove the edge between vertices 'Loki' and 'Loki'", () => {
+    const vertices = ["Thanos", "Loki", "Thor", "Hulk"];
+    const graph = new Graph();
+
+    generateVertices(graph, vertices);
+    graph.addEdge("Thanos", "Thor");
+    graph.addEdge("Thanos", "Loki");
+    graph.addEdge("Thanos", "Hulk");
+    graph.addEdge("Thor", "Hulk");
+    graph.addEdge("Thor", "Loki");
+    graph.addEdge("Thor", "Thor");
+    graph.addEdge("Hulk", "Loki");
+    graph.addEdge("Loki", "Thor");
+    graph.addEdge("Loki", "Hulk");
+
+    expect(removeEdge(Graph9().adjacencyList, "Loki", "Loki")).toEqual(graph.adjacencyList);
+})
+
+// Test Case 10: //? refer to Starter -> UnweightedDirected -> Images -> graph-10.png
+test("remove the edge between vertices 1 and 6", () => {
+    const vertices = [5, -26, 12, -3, 21, 19, -9, 1, 7, -16, 6];
+    const graph = new Graph();
+
+    generateVertices(graph, vertices);
+    graph.addEdge(5, 12);
+    graph.addEdge(5, -3);
+    graph.addEdge(5, 21);
+    graph.addEdge(-26, -3);
+    graph.addEdge(-26, 19);
+    graph.addEdge(12, -9);
+    graph.addEdge(12, 1);
+    graph.addEdge(12, 7);
+    graph.addEdge(-3, 1);
+    graph.addEdge(21, 7);
+    graph.addEdge(19, 6);
+    graph.addEdge(1, -16);
+
+    expect(removeEdge(Graph10().adjacencyList, 1, 6)).toEqual(graph.adjacencyList);
+})
+
+// Test Case 11: //? refer to Starter -> UnweightedDirected -> Images -> graph-11.png
+test("remove the edge between vertices 1 and 4", () => {
+    expect(removeEdge(Graph11().adjacencyList, 1, 4)).toEqual(Graph11().adjacencyList);
+})
+
+// Test Case 12: //? refer to Starter -> UnweightedDirected -> Images -> graph-12.png
+test("remove the edge between vertices 22 and 1", () => {
+    const vertices = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22];
+    const graph = new Graph();
+
+    generateVertices(graph, vertices);
+    graph.addEdge(1, 2);
+    graph.addEdge(2, 3);
+    graph.addEdge(3, 4);
+    graph.addEdge(4, 5);
+    graph.addEdge(5, 6);
+    graph.addEdge(6, 7);
+    graph.addEdge(7, 8);
+    graph.addEdge(8, 9);
+    graph.addEdge(9, 10);
+    graph.addEdge(10, 11);
+    graph.addEdge(11, 12);
+    graph.addEdge(12, 13);
+    graph.addEdge(13, 14);
+    graph.addEdge(14, 15);
+    graph.addEdge(15, 16);
+    graph.addEdge(16, 17);
+    graph.addEdge(17, 18);
+    graph.addEdge(18, 19);
+    graph.addEdge(19, 20);
+    graph.addEdge(20, 21);
+    graph.addEdge(21, 22);
+
+    expect(removeEdge(Graph12().adjacencyList, 22, 1)).toEqual(graph.adjacencyList);
+})
