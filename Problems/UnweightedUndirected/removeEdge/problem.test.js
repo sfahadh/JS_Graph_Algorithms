@@ -159,3 +159,74 @@ test("remove the edge between vertices 'Yin' and 'Yang'", () => {
     expect(removeEdge(Graph8().adjacencyList, "Yin", "Yang")).toEqual(graph.adjacencyList);
 })
 
+// Test Case 9: //? refer to Starter -> UnweightedUndirected -> Images -> graph-9.png
+test("remove the edge between vertices 'TX' and 'FL'", () => {
+    const vertices = ["NY", "TX", "FL"];
+    const graph = new Graph();
+
+    generateVertices(graph, vertices);
+    graph.addEdge("NY", "TX");
+    graph.addEdge("NY", "FL");
+
+    expect(removeEdge(Graph9().adjacencyList, "TX", "FL")).toEqual(graph.adjacencyList);
+})
+
+// Test Case 10: //? refer to Starter -> UnweightedUndirected -> Images -> graph-10.png
+test("remove the edge between vertices 'Hulk' and 'Drax'", () => {
+    const vertices = ["Drax", "Hulk", "Loki", "Thanos"];
+    const graph = new Graph();
+
+    generateVertices(graph, vertices);
+    graph.addEdge("Drax", "Loki");
+    graph.addEdge("Hulk", "Loki");
+
+    expect(removeEdge(Graph10().adjacencyList, "Hulk", "Drax")).toEqual(graph.adjacencyList);
+})
+
+// Test Case 11: //? refer to Starter -> UnweightedUndirected -> Images -> graph-11.png
+test("remove the edge between vertices 7 and 0", () => {
+    const vertices = [3, 10, -3, -7, 6, 7, 15, -12, 0, 12];
+    const graph = new Graph();
+
+    generateVertices(graph, vertices);
+    graph.addEdge(3, -7);
+    graph.addEdge(10, -3);
+    graph.addEdge(10, 6);
+    graph.addEdge(-3, 6);
+    graph.addEdge(-7, 6);
+    graph.addEdge(6, -12);
+    graph.addEdge(6, 12);
+    graph.addEdge(6, 15);
+    graph.addEdge(6, 7);
+    graph.addEdge(7, 15);
+    graph.addEdge(-12, 0);
+    graph.addEdge(0, 12);
+    graph.addEdge(12, 15);
+
+    expect(removeEdge(Graph11().adjacencyList, 7, 0)).toEqual(graph.adjacencyList);
+})
+
+// Test Case 12: //? refer to Starter -> UnweightedUndirected -> Images -> graph-12.png
+test("remove the edge between vertices -1 and -2", () => {
+    const vertices = [-2, -1, 0, -3, -4, -5];
+    const graph = new Graph();
+
+    generateVertices(graph, vertices);
+    graph.addEdge(-5, 0);
+    graph.addEdge(-5, -1);
+    graph.addEdge(-5, -2);
+    graph.addEdge(-5, -3);
+    graph.addEdge(-5, -4);
+    graph.addEdge(-4, 0);
+    graph.addEdge(-4, -1);
+    graph.addEdge(-4, -2);
+    graph.addEdge(-4, -3);
+    graph.addEdge(-3, 0);
+    graph.addEdge(-3, -1);
+    graph.addEdge(-3, -2);
+    graph.addEdge(-2, 0);
+    graph.addEdge(-1, 0);
+
+    expect(removeEdge(Graph12().adjacencyList, -1, -2)).toEqual(graph.adjacencyList);
+})
+
