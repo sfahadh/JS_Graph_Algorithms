@@ -132,3 +132,62 @@ test("remove the edge between vertices 0 and 1", () => {
 test("remove the edge between vertices 'A' and 'B'", () => {
     expect(removeEdge(Graph8().adjacencyList, "A", "B")).toEqual(Graph8().adjacencyList);
 })
+
+// Test Case 9: //? refer to Starter -> WeightedDirected -> Images -> graph-9.png
+test("remove the edge between vertices 'Purple' and 'Yellow'", () => {
+    const graph = new Graph();
+    const vertices = ["Red", "Green", "Blue", "Yellow", "Orange", "Purple"];
+
+    generateVertices(graph, vertices);
+    graph.addEdge("Red", "Purple", 15);
+    graph.addEdge("Red", "Green", 13);
+    graph.addEdge("Green", "Yellow", 10);
+    graph.addEdge("Green", "Blue", 7);
+    graph.addEdge("Purple", "Orange", 5);
+    graph.addEdge("Yellow", "Orange", -5);
+    graph.addEdge("Yellow", "Blue", -4);
+
+    expect(removeEdge(Graph9().adjacencyList, "Purple", "Yellow")).toEqual(graph.adjacencyList);
+})
+
+// Test Case 10: //? refer to Starter -> WeightedDirected -> Images -> graph-10.png
+test("remove the edge between vertices 'Smash' and 'Smash'", () => {
+    const graph = new Graph();
+    const vertices = ["Super", "Smash", "Bros"];
+
+    generateVertices(graph, vertices);
+    graph.addEdge("Super", "Smash", 15);
+    graph.addEdge("Super", "Bros", 13);
+    graph.addEdge("Smash", "Bros", 8);
+    graph.addEdge("Bros", "Bros", -4);
+
+    expect(removeEdge(Graph10().adjacencyList, "Smash", "Smash")).toEqual(graph.adjacencyList);
+})
+
+// Test Case 11: //? refer to Starter -> WeightedDirected -> Images -> graph-11.png
+test("remove the edge between vertices 'A' and 'F'", () => {
+    const graph = new Graph();
+    const vertices = ["A", "B", "C", "D", "E", "F", "G", "H"];
+
+    generateVertices(graph, vertices);
+    graph.addEdge("A", "B", 2);
+    graph.addEdge("A", "E", 3);
+    graph.addEdge("B", "F", 6);
+    graph.addEdge("B", "C", 5);
+    graph.addEdge("B", "G", 2);
+    graph.addEdge("C", "D", 4);
+    graph.addEdge("C", "F", 3);
+    graph.addEdge("C", "G", 5);
+    graph.addEdge("D", "G", 3);
+    graph.addEdge("D", "H", 1);
+    graph.addEdge("E", "F", 6);
+    graph.addEdge("G", "F", 6);
+    graph.addEdge("G", "H", 5);
+
+    expect(removeEdge(Graph11().adjacencyList, "A", "F")).toEqual(graph.adjacencyList);
+})
+
+// Test Case 12: //? refer to Starter -> WeightedDirected -> Images -> graph-12.png
+test("remove the edge between vertices 12 and -5", () => {
+    expect(removeEdge(Graph12().adjacencyList, 12, -5)).toEqual(Graph12().adjacencyList);
+})
