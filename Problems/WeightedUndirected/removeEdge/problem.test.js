@@ -25,3 +25,39 @@ test("remove the edge between vertices 'Hades' and 'Ares'", () => {
 
     expect(removeEdge(Graph1().adjacencyList, "Hades", "Ares")).toEqual(graph.adjacencyList);
 })
+
+// Test Case 2: //? refer to Starter -> WeightedUndirected -> Images -> graph-2.png
+test("remove the edge between vertices 'Up' and 'Down'", () => {
+    const graph = new Graph();
+    const vertices = ["Up", "Down", "Left", "Right"];
+
+    generateVertices(graph, vertices);
+    graph.addEdge("Left", "Right", 21);
+
+    expect(removeEdge(Graph2().adjacencyList, "Up", "Down")).toEqual(graph.adjacencyList);
+})
+
+// Test Case 3: //? refer to Starter -> WeightedUndirected -> Images -> graph-3.png
+test("remove the edge between vertices 'T' and 'B'", () => {
+    const graph = new Graph();
+    const vertices = ["T", "H", "E", "B", "O", "X"];
+
+    generateVertices(graph, vertices);
+    graph.addEdge("T", "H", 12);
+    graph.addEdge("T", "E", 18);
+    graph.addEdge("T", "O", 11);
+    graph.addEdge("T", "X", 16);
+    graph.addEdge("B", "E", 9);
+    graph.addEdge("B", "O", 15);
+    graph.addEdge("B", "X", 14);
+    graph.addEdge("B", "H", 23);
+    graph.addEdge("H", "E", 12);
+    graph.addEdge("X", "O", 7);
+
+    expect(removeEdge(Graph3().adjacencyList, "T", "B")).toEqual(graph.adjacencyList);
+})
+
+// Test Case 4: //? refer to Starter -> WeightedUndirected -> Images -> graph-4.png
+test("remove the edge between vertices 12 and 8", () => {
+    expect(removeEdge(Graph4().adjacencyList, 12, 8)).toEqual(Graph4().adjacencyList);
+})
