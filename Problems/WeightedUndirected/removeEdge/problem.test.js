@@ -61,3 +61,75 @@ test("remove the edge between vertices 'T' and 'B'", () => {
 test("remove the edge between vertices 12 and 8", () => {
     expect(removeEdge(Graph4().adjacencyList, 12, 8)).toEqual(Graph4().adjacencyList);
 })
+
+// Test Case 5: //? refer to Starter -> WeightedUndirected -> Images -> graph-5.png
+test("remove the edge between vertices 6 and 1", () => {
+    const graph = new Graph();
+    const vertices = [3, 6, 8, -9, -5, 4, 15, 1];
+
+    generateVertices(graph, vertices);
+    graph.addEdge(3, 6, 8);
+    graph.addEdge(3, -9, -13);
+    graph.addEdge(3, 15, -5);
+    graph.addEdge(3, 8, 20);
+    graph.addEdge(6, 4, 8);
+    graph.addEdge(8, 15, 20);
+    graph.addEdge(-9, 15, 18);
+    graph.addEdge(-5, 1, -3);
+    graph.addEdge(-5, 4, 10);
+    graph.addEdge(4, 1, 12);
+    graph.addEdge(15, 1, 4);
+
+    expect(removeEdge(Graph5().adjacencyList, 6, 1)).toEqual(graph.adjacencyList);
+})
+
+// Test Case 6: //? refer to Starter -> WeightedUndirected -> Images -> graph-6.png
+test("remove the edge between vertices 26 and 91", () => {
+    const graph = new Graph();
+    const vertices = [47, 26, 91, 99, 19, 74, 62];
+
+    generateVertices(graph, vertices);
+    graph.addEdge(47, 26, 38);
+    graph.addEdge(47, 99, 44);
+    graph.addEdge(99, 74, 45);
+    graph.addEdge(74, 62, 41);
+    graph.addEdge(62, 19, 36);
+
+    expect(removeEdge(Graph6().adjacencyList, 26, 91)).toEqual(graph.adjacencyList);
+})
+
+// Test Case 7: //? refer to Starter -> WeightedUndirected -> Images -> graph-7.png
+test("remove the edge between vertices 3 and 31", () => {
+    const graph = new Graph();
+    const vertices = [-11, 17, 26, 3, -91, 31, -21, 56];
+
+    generateVertices(graph, vertices);
+    graph.addEdge(-11, 17, 12);
+    graph.addEdge(-11, 3, -1);
+    graph.addEdge(17, 26, 7);
+    graph.addEdge(26, 3, 9);
+    graph.addEdge(3, 56, 21);
+    graph.addEdge(-91, 31, 25);
+    graph.addEdge(-91, -21, 7);
+    graph.addEdge(31, -21, 0);
+    graph.addEdge(31, 56, 10);
+    graph.addEdge(-21, 56, 17);
+
+    expect(removeEdge(Graph7().adjacencyList, 3, 31)).toEqual(graph.adjacencyList);
+})
+
+// Test Case 8: //? refer to Starter -> WeightedUndirected -> Images -> graph-8.png
+test("remove the edge between vertices 31 and 16", () => {
+    const graph = new Graph();
+    const vertices = [22, 43, 25, 31, 29, 16];
+
+    generateVertices(graph, vertices);
+    graph.addEdge(22, 31, 5);
+    graph.addEdge(22, 29, 9);
+    graph.addEdge(22, 25, 3);
+    graph.addEdge(43, 29, 2);
+    graph.addEdge(43, 16, 6);
+    graph.addEdge(25, 16, 7);
+
+    expect(removeEdge(Graph8().adjacencyList, 31, 16)).toEqual(graph.adjacencyList);
+})
