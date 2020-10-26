@@ -6,7 +6,7 @@ TODO: of the graph and the vertix that is to be removed from the adjacency list.
 TODO: problem is to completely remove the vertix including all its relationships with other vertices 
 TODO: and then return the adjacency list.
 
-function UnweightedGraph() {
+function UnweightedDirectedGraph() {
     this.adjacencyList = {};
 }
 */
@@ -19,7 +19,6 @@ const removeVertix = (adjacencyList, vertix) => {
     }
 
     delete adjacencyList[vertix];
-    console.log(adjacencyList)
     return adjacencyList;
 }
 
