@@ -49,3 +49,70 @@ test("remove the vertix 'T' and all its relationships", () => {
 
     expect(removeVertix(Graph4().adjacencyList, 'T')).toEqual(graph.adjacencyList);
 })
+
+// Test Case 5: //? refer to Starter -> UnweightedDirected -> Images -> graph-5.png
+test("remove the vertix 8 and all its relationships", () => {
+    const vertices = [6, -6, 7, -7];
+    const graph = new Graph();
+
+    generateVertices(graph, vertices);
+    graph.addEdge(6, -6);
+    graph.addEdge(-7, 7);
+
+    expect(removeVertix(Graph5().adjacencyList, 8)).toEqual(graph.adjacencyList);
+})
+
+// Test Case 6: //? refer to Starter -> UnweightedDirected -> Images -> graph-6.png
+test("remove the vertix 'S' and all its relationships", () => {
+    const vertices = ["U", "R", "M", "P", "E"];
+    const graph = new Graph();
+
+    generateVertices(graph, vertices);
+    graph.addEdge("R", "E");
+    graph.addEdge("M", "E");
+    graph.addEdge("M", "R");
+    graph.addEdge("M", "P");
+    graph.addEdge("P", "U");
+    graph.addEdge("P", "E");
+
+    expect(removeVertix(Graph6().adjacencyList, 'S')).toEqual(graph.adjacencyList);
+})
+
+// Test Case 7: //? refer to Starter -> UnweightedDirected -> Images -> graph-7.png
+test("remove the vertix 4 and all its relationships", () => {
+    const vertices = [1, 2, 7, 3, 5, 6];
+    const graph = new Graph();
+
+    generateVertices(graph, vertices);
+    graph.addEdge(1, 7);
+    graph.addEdge(1, 3);
+    graph.addEdge(1, 2);
+    graph.addEdge(2, 3);
+    graph.addEdge(2, 5);
+    graph.addEdge(3, 7);
+    graph.addEdge(3, 6);
+    graph.addEdge(5, 3);
+    graph.addEdge(5, 6);
+
+    expect(removeVertix(Graph7().adjacencyList, 4)).toEqual(graph.adjacencyList);
+})
+
+// Test Case 8: //? refer to Starter -> UnweightedDirected -> Images -> graph-8.png
+test("remove the vertix 21 and all its relationships", () => {
+    const vertices = [52, 29, 57, 71, 24, 33, 68, 98];
+    const graph = new Graph();
+
+    generateVertices(graph, vertices);
+    graph.addEdge(52, 29);
+    graph.addEdge(52, 57);
+    graph.addEdge(52, 71);
+    graph.addEdge(29, 24);
+    graph.addEdge(29, 33);
+    graph.addEdge(57, 71);
+    graph.addEdge(57, 68);
+    graph.addEdge(71, 57);
+    graph.addEdge(71, 68);
+    graph.addEdge(71, 98);
+
+    expect(removeVertix(Graph8().adjacencyList, 21)).toEqual(graph.adjacencyList);
+})

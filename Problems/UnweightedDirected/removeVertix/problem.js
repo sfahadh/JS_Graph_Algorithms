@@ -19,6 +19,7 @@ const removeVertix = (adjacencyList, vertix) => {
     }
 
     delete adjacencyList[vertix];
+    console.log(adjacencyList);
     return adjacencyList;
 }
 
