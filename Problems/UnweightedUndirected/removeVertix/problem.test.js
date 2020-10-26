@@ -77,3 +77,72 @@ test("remove the vertix 3 and all its relationships", () => {
 
     expect(removeVertix(Graph4().adjacencyList, 3)).toEqual(graph.adjacencyList);
 })
+
+// Test Case 5: //? refer to Starter -> UnweightedUndirected -> Images -> graph-5.png
+test("remove the vertix 2 and all its relationships", () => {
+    const vertices = [9, 5, 4, 1, 3, 7, 0];
+    const graph = new Graph();
+
+    generateVertices(graph, vertices);
+    graph.addEdge(9, 5);
+    graph.addEdge(9, 4);
+    graph.addEdge(4, 5);
+    graph.addEdge(4, 3);
+    graph.addEdge(3, 0);
+    graph.addEdge(3, 7);
+    graph.addEdge(0, 7);
+
+    expect(removeVertix(Graph5().adjacencyList, 2)).toEqual(graph.adjacencyList);
+})
+
+// Test Case 6: //? refer to Starter -> UnweightedUndirected -> Images -> graph-6.png
+test("remove the vertix 'D' and all its relationships", () => {
+    const vertices = ["N", "O", "R", "A", "T", "K", "E", "I", "X"];
+    const graph = new Graph();
+
+    generateVertices(graph, vertices);
+    graph.addEdge("R", "E");
+    graph.addEdge("N", "A");
+    graph.addEdge("N", "K");
+    graph.addEdge("N", "T");
+    graph.addEdge("K", "I");
+    graph.addEdge("K", "X");
+
+    expect(removeVertix(Graph6().adjacencyList, "D")).toEqual(graph.adjacencyList);
+})
+
+// Test Case 7: //? refer to Starter -> UnweightedUndirected -> Images -> graph-7.png
+test("remove the vertix 'E' and all its relationships", () => {
+    const vertices = ["A", "H", "B", "D", "G", "I", "M", "C", "F", "K", "L"];
+    const graph = new Graph();
+
+    generateVertices(graph, vertices);
+    graph.addEdge("A", "B");
+    graph.addEdge("A", "D");
+    graph.addEdge("A", "G");
+    graph.addEdge("A", "H");
+    graph.addEdge("H", "I");
+    graph.addEdge("B", "D");
+    graph.addEdge("B", "C");
+    graph.addEdge("B", "C");
+    graph.addEdge("D", "C");
+    graph.addEdge("D", "F");
+    graph.addEdge("D", "G");
+    graph.addEdge("G", "F");
+    graph.addEdge("G", "I");
+    graph.addEdge("I", "F");
+    graph.addEdge("I", "K");
+    graph.addEdge("I", "L");
+    graph.addEdge("I", "M");
+    graph.addEdge("M", "L");
+    graph.addEdge("C", "F");
+    graph.addEdge("F", "K");
+    graph.addEdge("K", "L");
+
+    expect(removeVertix(Graph7().adjacencyList, "E")).toEqual(graph.adjacencyList);
+})
+
+// Test Case 8: //? refer to Starter -> UnweightedUndirected -> Images -> graph-8.png
+test("remove the vertix 'Yo' and all its relationships", () => {
+    expect(removeVertix(Graph8().adjacencyList, "Yo")).toEqual(Graph8().adjacencyList);
+})
