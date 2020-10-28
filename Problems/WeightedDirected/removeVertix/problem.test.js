@@ -119,3 +119,43 @@ test("remove the vertix 'H' and all its relationships", () => {
 
     expect(removeVertix(Graph8().adjacencyList, "H")).toEqual(graph.adjacencyList);
 })
+
+// Test Case 9: //? refer to Starter -> WeightedDirected -> Images -> graph-9.png
+test("remove the vertix 'Yellow' and all its relationships", () => {
+    const vertices = ["Red", "Green", "Blue", "Orange", "Purple"];
+    const graph = new Graph();
+
+    generateVertices(graph, vertices);
+    graph.addEdge("Red", "Purple", 15);
+    graph.addEdge("Red", "Green", 13);
+    graph.addEdge("Green", "Blue", 7);
+    graph.addEdge("Purple", "Orange", 5);
+
+    expect(removeVertix(Graph9().adjacencyList, "Yellow")).toEqual(graph.adjacencyList);
+})
+
+// Test Case 11: //? refer to Starter -> WeightedDirected -> Images -> graph-11.png
+test("remove the vertix 'D' and all its relationships", () => {
+    const vertices = ["A", "B", "C", "E", "F", "G", "H"];
+    const graph = new Graph();
+
+    generateVertices(graph, vertices);
+    graph.addEdge("A", "B", 2);
+    graph.addEdge("A", "F", 7);
+    graph.addEdge("A", "E", 3);
+    graph.addEdge("B", "F", 6);
+    graph.addEdge("B", "C", 5);
+    graph.addEdge("B", "G", 2);
+    graph.addEdge("C", "F", 3);
+    graph.addEdge("C", "G", 5);
+    graph.addEdge("E", "F", 6);
+    graph.addEdge("G", "F", 6);
+    graph.addEdge("G", "H", 5);
+
+    expect(removeVertix(Graph11().adjacencyList, "D")).toEqual(graph.adjacencyList);
+})
+
+// Test Case 12: //? refer to Starter -> WeightedDirected -> Images -> graph-12.png
+test("remove the vertix '99' and all its relationships", () => {
+    expect(removeVertix(Graph12().adjacencyList, 99)).toEqual(Graph12().adjacencyList);
+})
