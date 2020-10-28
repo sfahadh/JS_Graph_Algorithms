@@ -134,6 +134,18 @@ test("remove the vertix 'Yellow' and all its relationships", () => {
     expect(removeVertix(Graph9().adjacencyList, "Yellow")).toEqual(graph.adjacencyList);
 })
 
+// Test Case 10: //? refer to Starter -> WeightedDirected -> Images -> graph-10.png
+test("remove the vertix 'Smash' and all its relationships", () => {
+    const vertices = ["Super", "Bros"];
+    const graph = new Graph();
+
+    generateVertices(graph, vertices);
+    graph.addEdge("Super", "Bros", 13);
+    graph.addEdge("Bros", "Bros", -4);
+
+    expect(removeVertix(Graph10().adjacencyList, "Smash")).toEqual(graph.adjacencyList);
+})
+
 // Test Case 11: //? refer to Starter -> WeightedDirected -> Images -> graph-11.png
 test("remove the vertix 'D' and all its relationships", () => {
     const vertices = ["A", "B", "C", "E", "F", "G", "H"];
