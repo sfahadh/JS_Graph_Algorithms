@@ -2,8 +2,8 @@
 
 /*
 TODO: Complete the following add edge problem below. There are three inputs, the adjacency list 
-TODO: of the graph and the 2 vertices to establish the relationship. The goal of this problem is 
-TODO: to add an edge between the two vertices then return the adjacency list.
+TODO: of the graph and the 2 vertices to establish the relationship. The goal of this problem  
+TODO: is to add an edge between the two vertices then return the adjacency list.
 
 function UnweightedUndirectedGraph() {
     this.adjacencyList = {};
